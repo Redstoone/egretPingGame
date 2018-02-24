@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LoginSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui">
+	<e:Rect id="sky" left="0" right="0" top="0" bottom="0" fillColor="0x29BDF6"/>
+	<e:Image width="100%" height="100%" x="0" y="0" source="hall_bg_jpg"/>
+	<e:Label text="welcome to pingshi" x="334" y="234" textColor="0xfc0707"/>
+</e:Skin>

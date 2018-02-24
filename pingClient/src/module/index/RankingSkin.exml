@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RankingSkin" width="397" height="511" xmlns:e="http://ns.egret.com/eui">
+  <e:Image height="100%" width="100%" x="0" y="0" source="ranking_bg_png" />
+  <e:Group width="397" height="511" x="0" y="0">
+    <e:Image height="59" width="367" x="15" y="13" source="ranking_nav_bar_png" />
+    <e:Image id="tabActive" height="64" width="202" x="15" y="13" source="ranking_btn_active_png" />
+    <e:Group>
+      <e:RadioButton id="radioBtn" label="" y="13" width="183.5" height="59" x="15" value="0" selected="true">
+        <e:skinName>
+          <e:Skin states="up,down,disabled">
+            <e:Image width="100%" height="100%" source="ranking_dou_png" source.down="ranking_dou_active_png" />
+            <e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+          </e:Skin>
+        </e:skinName>
+      </e:RadioButton>
+      <e:RadioButton label="" y="13" width="183.5" height="59" x="198.5" value="1">
+        <e:skinName>
+          <e:Skin states="up,down,disabled">
+            <e:Image width="100%" height="100%" source="ranking_ping_png" source.down="ranking_ping_active_png" />
+            <e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+          </e:Skin>
+        </e:skinName>
+      </e:RadioButton>
+    </e:Group>
+    <e:ViewStack id="viewStack" height="397" width="358" x="25" y="80">
+      <e:Group height="100%" width="100%">
+        <e:Scroller left="1" right="1" top="1" bottom="1" width="100%" scrollPolicyH="false" bounces="false">
+          <e:List id="douList" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="100%" itemRendererSkinName="RankingItemSkin"></e:List>
+        </e:Scroller>
+      </e:Group>
+      <e:Group height="100%" width="100%">
+        <e:Scroller left="1" right="1" top="1" bottom="1" width="100%" scrollPolicyH="false" bounces="false">
+          <e:List id="pingList" anchorOffsetX="0" width="100%" anchorOffsetY="0" height="100%" itemRendererSkinName="RankingItemSkin"></e:List>
+        </e:Scroller>
+      </e:Group>
+    </e:ViewStack>
+  </e:Group>
+</e:Skin>

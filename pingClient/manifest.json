@@ -1,0 +1,36 @@
+{
+	"initial": [
+		"libs/modules/egret/egret.js",
+		"libs/modules/egret/egret.web.js",
+		"libs/modules/eui/eui.js",
+		"libs/modules/game/game.js",
+		"libs/modules/res/res.js",
+		"libs/modules/tween/tween.js",
+		"promise/bin/promise.js",
+		"libs/modules/socket.io/socket.io.js"
+	],
+	"game": [
+		"bin-debug/utils/BaseComponent.js",
+		"bin-debug/LoadingUI.js",
+		"bin-debug/Main.js",
+		"bin-debug/ThemeAdapter.js",
+		"bin-debug/data/SceneMgr.js",
+		"bin-debug/module/com/Alert.js",
+		"bin-debug/module/com/Notify.js",
+		"bin-debug/module/com/RankingItem.js",
+		"bin-debug/module/com/UserInfo.js",
+		"bin-debug/module/index/IndexScene.js",
+		"bin-debug/module/index/Match.js",
+		"bin-debug/utils/Util.js",
+		"bin-debug/module/index/Ranking.js",
+		"bin-debug/module/loading/ResLoading.js",
+		"bin-debug/module/login/Login.js",
+		"bin-debug/AssetAdapter.js",
+		"bin-debug/utils/CallBackFunc.js",
+		"bin-debug/utils/Director.js",
+		"bin-debug/utils/Display.js",
+		"bin-debug/utils/GuidLayerUtil.js",
+		"bin-debug/utils/Network.js",
+		"bin-debug/module/index/Menu.js"
+	]
+}

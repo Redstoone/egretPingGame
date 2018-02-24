@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MenuSkin" width="1314" height="120" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="1616b44087f"/>
+  <e:Image height="100" width="100%" source="menu_bg_png" horizontalCenter="0" bottom="0"/>
+
+  <e:Group>
+    <e:Button id="menuRecordBtn" x="0" y="30" width="262" height="90">
+      <e:skinName>
+        <e:Skin states="up,down,disabled">
+          <e:Image width="80" height="86" source="menu_record_png" horizontalCenter="0" verticalCenter="0"/>
+        </e:Skin>
+      </e:skinName>
+    </e:Button>
+
+    <e:Button id="menuFriendsBtn" x="262" y="30" width="262" height="90">
+      <e:skinName>
+        <e:Skin states="up,down,disabled">
+          <e:Image width="80" height="86" source="menu_friends_png" horizontalCenter="0" verticalCenter="0"/>
+        </e:Skin>
+      </e:skinName>
+    </e:Button>
+
+    <e:Button id="menuMallBtn" x="564" y="0" width="266" height="120">
+      <e:skinName>
+        <e:Skin states="up,down,disabled">
+          <e:Image width="177" height="112" source="menu_mall_png" horizontalCenter="0" verticalCenter="0"/>
+        </e:Skin>
+      </e:skinName>
+    </e:Button>
+
+    <e:Button id="menuWelfareBtn" x="790" y="30" width="262" height="90">
+      <e:skinName>
+        <e:Skin states="up,down,disabled">
+          <e:Image width="80" height="86" source="menu_welfare_png" horizontalCenter="0" verticalCenter="0"/>
+        </e:Skin>
+      </e:skinName>
+    </e:Button>
+
+    <e:Button id="menuKefuBtn" x="1054" y="30" width="262" height="90">
+      <e:skinName>
+        <e:Skin states="up,down,disabled">
+          <e:Image width="80" height="86" source="menu_kefu_png" horizontalCenter="0" verticalCenter="0"/>
+        </e:Skin>
+      </e:skinName>
+    </e:Button>
+
+  </e:Group>
+</e:Skin>

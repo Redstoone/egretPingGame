@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="NotifySkin" width="653" height="45" xmlns:e="http://ns.egret.com/eui">
+  <e:Image width="653" height="45" source="notice_bg_png"/>
+  <e:Label id="notifyTxt" size="26" width="653" height="45" textColor="0xb8b8b8" text="这里是公告信息" verticalCenter="0"  horizontalCenter="0" verticalAlign="middle" textAlign="center"/>
+</e:Skin>
