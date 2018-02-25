@@ -5,7 +5,6 @@
  */
 
 class Match extends BaseComponent {
-	private static instance: Match;
 	private matchPingBtn: eui.Button = null;
 	private matchDouBtn: eui.Button = null;
 	private matchCreateBtn: eui.Button = null;
@@ -13,14 +12,11 @@ class Match extends BaseComponent {
 
 	public constructor() {
 		super();
-		Match.instance = this;
-		// this.load("component/MatchSkin.exml");
-		this.skinName = "MatchSkin";
+		
+		this.load("index/MatchSkin.exml");
 
-		// var inst = Match.instance;
-		// inst.x = 921;
-		// inst.y = 88;
-		// Main.getInstance().addChild(inst);
+		this.x = 921;
+		this.y = 88;
 	}
 
 	protected initComponent() {

@@ -2,6 +2,6 @@
 <e:Skin class="IndexSceneSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
   <e:Image height="100%" width="100%" x="0" y="0" source="hall_bg_jpg"  locked="true"/>
   <e:Image height="661" width="388" x="499" y="89" source="role_png"  locked="true"/>
-	<e:Component width="1334" height="106" x="0" y="0" skinName="UserInfoSkin"/>
-	<e:Rect width="655" height="45" x="384" y="24" skinName="NotifySkin" fillAlpha="0"/>
+	<!--<e:Component width="1334" height="106" x="0" y="0" skinName="UserInfoSkin"/>-->
+	<!--<e:Rect width="655" height="45" x="384" y="24" skinName="NotifySkin" fillAlpha="0"/>-->
 </e:Skin>

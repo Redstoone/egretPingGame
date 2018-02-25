@@ -1,5 +1,4 @@
 class Notify extends BaseComponent {
-	private static instance: Notify;
 	private _running: Array<eui.Label> = [];
 	private _waiting: Array<eui.Label> = [];
 
@@ -13,7 +12,6 @@ class Notify extends BaseComponent {
 
 	public constructor(x: number, y: number, width: number, height: number, space: number, bias: number, delay: number) {
 		super();
-		Notify.instance = this;
 		this.load("com/NotifySkin.exml");
 		// this.skinName = "NotifySkin";
 
@@ -29,11 +27,6 @@ class Notify extends BaseComponent {
 
 		this._space = space;
 		this._bias = bias;
-
-		var inst = Notify.instance;
-		inst.x = x;
-		inst.y = y;
-		// Main.getInstance().addChild(inst);
 	}
 
 	private onAddToStage() {

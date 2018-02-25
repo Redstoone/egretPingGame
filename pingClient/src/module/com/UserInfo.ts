@@ -14,7 +14,7 @@ class UserInfo extends BaseComponent {
 
 	public constructor() {
 		super();
-		this.load("com/UserInfoSkin.exml");
+		this.load("UserInfoSkin");
 	}
 
 	protected initComponent() {

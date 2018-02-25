@@ -5,7 +5,6 @@
  */
 
 class Menu extends BaseComponent {
-	private static instance: Menu;
 	private menuRecordBtn: eui.Button = null;
 	private menuFriendsBtn: eui.Button = null;
 	private menuMallBtn: eui.Button = null;
@@ -14,14 +13,10 @@ class Menu extends BaseComponent {
 
 	public constructor() {
 		super();
-		Menu.instance = this;
-		// this.load("component/MenuSkin.exml");
-		this.skinName = "MenuSkin";
+		this.load("index/MenuSkin.exml");
 
-		var inst = Menu.instance;
-		inst.x = 6;
-		inst.y = 630;
-		// Main.getInstance().addChild(inst);
+		this.x = 6;
+		this.y = 630;
 	}
 
 	protected initComponent() {

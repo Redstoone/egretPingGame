@@ -10,7 +10,7 @@ class BaseComponent extends eui.Component {
 
 	protected load(skinName: string) {
 		this.addEventListener(eui.UIEvent.COMPLETE, this.onUIComplete, this);
-		this.skinName = "src/module/" + skinName;
+		this.skinName = skinName;
 	}
 
 	protected onUIComplete(ev: eui.UIEvent) {

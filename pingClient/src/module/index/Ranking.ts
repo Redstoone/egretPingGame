@@ -6,7 +6,6 @@ module game {
 	 */
 
 	export class Ranking extends BaseComponent {
-		private static instance: Ranking;
 		private tabActive: eui.Image;
 		private viewStack: eui.ViewStack;
 		private radioBtn: eui.RadioButton;
@@ -35,17 +34,13 @@ module game {
 
 		public constructor() {
 			super();
-			Ranking.instance = this;
 			this.load("index/RankingSkin.exml");
 
-			// this.skinName = "RankingSkin";
 			// 默认显示斗地主排行榜
-
 			this.douListShow()
 
-			var inst = Ranking.instance;
-			inst.x = 38;
-			inst.y = 118;
+			this.x = 38;
+			this.y = 118;
 			// Main.getInstance().addChild(inst);
 		}
 
