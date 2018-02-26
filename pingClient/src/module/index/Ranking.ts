@@ -1,4 +1,4 @@
-module game {
+module uiComponent {
 	/**
 	 *
 	 * @author redstoone
@@ -6,27 +6,27 @@ module game {
 	 */
 
 	export class Ranking extends BaseComponent {
-		private tabActive: eui.Image;
-		private viewStack: eui.ViewStack;
-		private radioBtn: eui.RadioButton;
-		public currIndex: number = 0
+		public currIndex: number = 0;
 
-		private douList: eui.List;
-		private pingList: eui.List;
+		private tabActive: eui.Image = null;
+		private radioBtn: eui.RadioButton = null;
+		private viewStack: eui.ViewStack = null;
+		private douList: eui.List = null;
+		private pingList: eui.List = null;
 
 		private douListData: Array<any> = [
-			{ ranking: 1, avatar: "/resource/assets/ranking/ranking_user.jpg", wins: 180, name: "小鱼儿的记忆" },
-			{ ranking: 2, avatar: "/resource/assets/ranking/ranking_user.jpg", wins: 20, name: "Ambar" },
-			{ ranking: 3, avatar: "/resource/assets/ranking/ranking_user.jpg", wins: 40, name: "六号宝宝" },
-			{ ranking: 4, avatar: "/resource/assets/ranking/ranking_user.jpg", wins: 60, name: "小鱼儿的记忆2号" },
-			{ ranking: 5, avatar: "/resource/assets/ranking/ranking_user.jpg", wins: 20, name: "任任任1234" },
-			{ ranking: 6, avatar: "/resource/assets/ranking/ranking_user.jpg", wins: 880, name: "nickname6" }
+			{ ranking: 1, avatar: "/resource/pingGame/com/ranking_user.jpg", wins: 180, name: "小鱼儿的记忆" },
+			{ ranking: 2, avatar: "/resource/pingGame/com/ranking_user.jpg", wins: 20, name: "Ambar" },
+			{ ranking: 3, avatar: "/resource/pingGame/com/ranking_user.jpg", wins: 40, name: "六号宝宝" },
+			{ ranking: 4, avatar: "/resource/pingGame/com/ranking_user.jpg", wins: 60, name: "小鱼儿的记忆2号" },
+			{ ranking: 5, avatar: "/resource/pingGame/com/ranking_user.jpg", wins: 20, name: "任任任1234" },
+			{ ranking: 6, avatar: "/resource/pingGame/com/ranking_user.jpg", wins: 880, name: "nickname6" }
 		]; //数据,可动态生成
 
 		private pingListData: Array<any> = [
-			{ ranking: 1, avatar: "/resource/assets/ranking/ranking_user.jpg", wins: 180, name: "小鱼儿的记忆" },
-			{ ranking: 2, avatar: "/resource/assets/ranking/ranking_user.jpg", wins: 20, name: "Ambar" },
-			{ ranking: 3, avatar: "/resource/assets/ranking/ranking_user.jpg", wins: 40, name: "六号宝宝" },
+			{ ranking: 1, avatar: "/resource/pingGame/com/ranking_user.jpg", wins: 180, name: "小鱼儿的记忆" },
+			{ ranking: 2, avatar: "/resource/pingGame/com/ranking_user.jpg", wins: 20, name: "Ambar" },
+			{ ranking: 3, avatar: "/resource/pingGame/com/ranking_user.jpg", wins: 40, name: "六号宝宝" },
 		]; //数据,可动态生成
 
 		private douConllection: eui.ArrayCollection = new eui.ArrayCollection();
@@ -36,15 +36,14 @@ module game {
 			super();
 			this.load("index/RankingSkin.exml");
 
-			// 默认显示斗地主排行榜
-			this.douListShow()
-
 			this.x = 38;
 			this.y = 118;
-			// Main.getInstance().addChild(inst);
 		}
 
 		protected initComponent() {
+			// 默认显示斗地主排行榜
+			this.douListShow()
+
 			this.radioBtn.group.addEventListener(eui.UIEvent.CHANGE, this.onChange, this);
 		}
 
@@ -66,14 +65,16 @@ module game {
 
 		private pingListShow() {
 			this.pingConllection.source = this.pingListData;
+			this.pingList.itemRendererSkinName = Main.resUrl + "com/RankingItemSkin.exml";
+			this.pingList.itemRenderer = uiComponent.RankingItem;
 			this.pingList.dataProvider = this.pingConllection;
-			this.pingList.itemRenderer = game.RankingItem;
 		}
 
 		private douListShow() {
 			this.douConllection.source = this.douListData;
+			this.douList.itemRendererSkinName = Main.resUrl + "com/RankingItemSkin.exml";
+			this.douList.itemRenderer = uiComponent.RankingItem;
 			this.douList.dataProvider = this.douConllection;
-			this.douList.itemRenderer = game.RankingItem;
 		}
 	}
 }

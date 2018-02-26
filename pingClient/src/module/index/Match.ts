@@ -12,7 +12,6 @@ class Match extends BaseComponent {
 
 	public constructor() {
 		super();
-		
 		this.load("index/MatchSkin.exml");
 
 		this.x = 921;
