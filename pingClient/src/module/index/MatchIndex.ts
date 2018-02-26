@@ -6,7 +6,7 @@ class MatchIndex extends BaseComponent {
 
 	public constructor() {
 		super();
-		this.load("index/MatchSkin.exml");
+		this.load("index/MatchIndexSkin.exml");
 
 		this.x = 921;
 		this.y = 88;
@@ -20,11 +20,11 @@ class MatchIndex extends BaseComponent {
 	}
 
 	private onPingBtnTouch(ev: egret.TouchEvent): void {
-		console.log('ping:', ev, this)
+		SceneMgr.gotoPingIndex();
 	}
 
 	private onDouBtnTouch(ev: egret.TouchEvent): void {
-		console.log('dou:', ev)
+		SceneMgr.gotoDouIndex();
 	}
 
 	private onCreateBtnTouch(ev: egret.TouchEvent): void {

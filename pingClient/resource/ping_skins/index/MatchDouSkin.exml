@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MatchDouSkin" width="372" height="352" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="161d0d60307"/>
+  <e:Group>
+    <e:Button id="matchCreateBtn" x="0" y="0" width="372" height="152">
+      <e:skinName>
+        <e:Skin states="up,down,disabled">
+          <e:Image width="100%" height="100%" source="match_create_png" horizontalCenter="0" verticalCenter="0" />
+        </e:Skin>
+      </e:skinName>
+    </e:Button>
+    <e:Button id="matchArenaBtn" x="0" y="201.5" width="372" height="152">
+      <e:skinName>
+        <e:Skin states="up,down,disabled">
+          <e:Image width="100%" height="100%" source="match_arena_png" horizontalCenter="0" verticalCenter="0" />
+        </e:Skin>
+      </e:skinName>
+    </e:Button>
+  </e:Group>
+</e:Skin>

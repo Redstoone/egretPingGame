@@ -30,11 +30,24 @@ class SceneMgr {
 		let loading = new ResLoading();
 		Director.getInstance().pushScene(loading);
 		let call = new CallBackFunc().handler(SceneMgr.onDouIndex, this, []);
-		loading.load(["com", 'index', 'dou'], call);
+		loading.load(["com", 'index'], call);
 	}
 
 	private static onDouIndex() {
 		let index = new DouScene();
+		Director.getInstance().repleaceScene(index);
+	}
+
+	// 拼十大厅
+	public static gotoPingIndex() {
+		let loading = new ResLoading();
+		Director.getInstance().pushScene(loading);
+		let call = new CallBackFunc().handler(SceneMgr.onPingIndex, this, []);
+		loading.load(["com", 'index'], call);
+	}
+
+	private static onPingIndex() {
+		let index = new PingScene();
 		Director.getInstance().repleaceScene(index);
 	}
 

@@ -1,4 +1,4 @@
-class IndexScene extends BaseComponent{
+class IndexScene extends BaseComponent {
 
 	public constructor() {
 		super();
@@ -12,7 +12,7 @@ class IndexScene extends BaseComponent{
 		this.addChild(menu);
 
 		let match = new MatchIndex();
-		match.skinName = Main.resUrl + "index/MatchSkin.exml";
+		match.skinName = Main.resUrl + "index/MatchIndexSkin.exml";
 		this.addChild(match);
 
 		let notify = new Notify(384, 24, 653, 45, 5, 0, 3000);
@@ -20,7 +20,7 @@ class IndexScene extends BaseComponent{
 		this.addChild(notify);
 
 		let ranking = new uiComponent.Ranking();
-		ranking.skinName = Main.resUrl +  "index/RankingSkin.exml";
+		ranking.skinName = Main.resUrl + "index/RankingSkin.exml";
 		this.addChild(ranking);
 
 		this.load("index/IndexSceneSkin.exml");

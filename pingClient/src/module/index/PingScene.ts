@@ -1,4 +1,4 @@
-class DouScene extends BaseComponent {
+class PingScene extends BaseComponent {
 	public constructor() {
 		super();
 
@@ -10,14 +10,14 @@ class DouScene extends BaseComponent {
 		notify.skinName = Main.resUrl + "com/NotifySkin.exml";
 		this.addChild(notify);
 
-		let match = new MatchDou();
-		match.skinName = Main.resUrl + "index/MatchDouSkin.exml";
+		let match = new MatchPing();
+		match.skinName = Main.resUrl + "index/MatchPingSkin.exml";
 		this.addChild(match);
 
 		this.load("index/IndexSceneSkin.exml");
 	}
 
 	protected initComponent() {
-		console.log('dou secne initComponent')
+		console.log('ping secne initComponent')
 	}
 }
