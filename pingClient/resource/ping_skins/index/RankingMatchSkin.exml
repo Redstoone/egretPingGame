@@ -1,3 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="RankingMatchSkin" width="400" height="300" xmlns:e="http://ns.egret.com/eui">
+<e:Skin class="RankingMatchSkin" width="397" height="511" xmlns:e="http://ns.egret.com/eui">
+  <e:Image height="100%" width="100%" x="0" y="0" source="ranking_match_bg_png" />
+  <e:ViewStack id="viewStack" height="397" width="358" x="25" y="80">
+    <e:Group height="100%" width="100%">
+      <e:Scroller left="1" right="1" top="1" bottom="1" width="100%" scrollPolicyH="false" bounces="false">
+        <e:List id="rankingList" anchorOffsetX="0" width="347" anchorOffsetY="0" height="100%" x="-1" y="0"></e:List>
+      </e:Scroller>
+    </e:Group>
+  </e:ViewStack>
+  <e:Label text="我的胜场数：12场  暂未上榜" x="30" y="480" anchorOffsetX="0" width="350" anchorOffsetY="0" height="20" textAlign="center" size="20" textColor="0x23304b"/>
 </e:Skin>

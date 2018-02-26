@@ -19,8 +19,8 @@ class IndexScene extends BaseComponent {
 		notify.skinName = Main.resUrl + "com/NotifySkin.exml";
 		this.addChild(notify);
 
-		let ranking = new uiComponent.Ranking();
-		ranking.skinName = Main.resUrl + "index/RankingSkin.exml";
+		let ranking = new uiComponent.RankingIndex();
+		ranking.skinName = Main.resUrl + "index/RankingIndexSkin.exml";
 		this.addChild(ranking);
 
 		this.load("index/IndexSceneSkin.exml");

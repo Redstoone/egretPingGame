@@ -14,6 +14,10 @@ class DouScene extends BaseComponent {
 		match.skinName = Main.resUrl + "index/MatchDouSkin.exml";
 		this.addChild(match);
 
+		let ranking = new uiComponent.RankingMatch();
+		ranking.skinName = Main.resUrl + "index/RankingMatchSkin.exml";
+		this.addChild(ranking);
+
 		this.load("index/IndexSceneSkin.exml");
 	}
 

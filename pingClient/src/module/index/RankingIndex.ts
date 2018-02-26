@@ -1,5 +1,5 @@
 module uiComponent {
-	export class Ranking extends BaseComponent {
+	export class RankingIndex extends BaseComponent {
 		public currIndex: number = 0;
 
 		private tabActive: eui.Image = null;
@@ -28,7 +28,7 @@ module uiComponent {
 
 		public constructor() {
 			super();
-			this.load("index/RankingSkin.exml");
+			this.load("index/RankingIndexSkin.exml");
 
 			this.x = 38;
 			this.y = 118;
