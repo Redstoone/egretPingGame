@@ -4,27 +4,26 @@ class IndexScene extends BaseComponent{
 		super();
 
 		let userInfo = new UserInfo();
-		userInfo.skinName = "UserInfoSkin";
+		userInfo.skinName = Main.resUrl + "com/UserInfoSkin.exml";
 		this.addChild(userInfo);
 
 		let menu = new Menu();
-		menu.skinName = "MenuSkin";
+		menu.skinName = Main.resUrl + "index/MenuSkin.exml";
 		this.addChild(menu);
 
 		let match = new Match();
-		match.skinName = "MatchSkin";
+		match.skinName = Main.resUrl + "index/MatchSkin.exml";
 		this.addChild(match);
 
 		let notify = new Notify(384, 24, 653, 45, 5, 0, 3000);
-		notify.skinName = "NotifySkin";
+		notify.skinName = Main.resUrl + "com/NotifySkin.exml";
 		this.addChild(notify);
 
 		// let ranking = new game.Ranking();
 		// menu.skinName = "src/module/index/RankingSkin.exml";
 		// this.addChild(notify);
 
-		// this.load("IndexSceneSkin");
-		this.skinName = "IndexSceneSkin"
+		this.load("index/IndexSceneSkin.exml");
 	}
 
 	protected initComponent() {

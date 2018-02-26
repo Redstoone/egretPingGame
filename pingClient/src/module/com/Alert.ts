@@ -4,7 +4,7 @@
  *
  */
 
-class Alert extends eui.Component {
+class Alert extends BaseComponent {
 	private static instance: Alert;
 	private static texts: Object = {
 		"InvalidToken": "登录验证失败",
@@ -33,9 +33,7 @@ class Alert extends eui.Component {
 
 	public constructor() {
 		super();
-		// Alert.instance = this;
-		// this.load("component/AlertSkin.exml");
-		this.skinName = "AlertSkin";
+		this.load("com/AlertSkin.exml");
 	}
 
 	protected initComponent() {

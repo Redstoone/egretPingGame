@@ -14,7 +14,7 @@ module game {
 
 		public constructor() {
 			super();
-			this.skinName = "RankingItemSkin";
+			this.skinName = Main.resUrl + "com/RankingItemSkin.exml";
 		}
 
 		public dataChanged(): void {

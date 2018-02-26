@@ -28,6 +28,7 @@
 //////////////////////////////////////////////////////////////////////////////////////
 
 class Main extends eui.UILayer {
+	public static resUrl = "resource/ping_skins/"
 	private static instance: Main = null;
 
 	public static getInstance() {

@@ -9,7 +9,7 @@ class ResLoading extends eui.Component {
 
 	public constructor() {
 		super();
-		this.skinName = "ResLoadingSkin";
+		this.skinName = Main.resUrl +  "loading/ResLoadingSkin.exml";
 		// this.addEventListener(egret.Event.ADDED_TO_STAGE, this.addStage, this);
 	}
 
