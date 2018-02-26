@@ -1,10 +1,4 @@
 module uiComponent {
-	/**
-	 *
-	 * @author redstoone
-	 *
-	 */
-
 	export class RankingItem extends eui.ItemRenderer {
 		private ranking_lab: eui.Label;
 		private name_lab: eui.Label;

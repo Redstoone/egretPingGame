@@ -1,10 +1,4 @@
-/**
- *
- * @author redstoone
- *
- */
-
-class Match extends BaseComponent {
+class MatchIndex extends BaseComponent {
 	private matchPingBtn: eui.Button = null;
 	private matchDouBtn: eui.Button = null;
 	private matchCreateBtn: eui.Button = null;

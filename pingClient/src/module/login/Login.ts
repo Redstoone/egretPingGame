@@ -1,8 +1,3 @@
-/**
- *
- * @author redstoone
- *
- */
 class Login extends BaseComponent {
 	private btnLogin: eui.Button;
 

@@ -1,10 +1,4 @@
 module uiComponent {
-	/**
-	 *
-	 * @author redstoone
-	 *
-	 */
-
 	export class Ranking extends BaseComponent {
 		public currIndex: number = 0;
 

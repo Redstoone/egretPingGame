@@ -1,9 +1,3 @@
-/**
- *
- * @author redstoone
- *
- */
-
 class UserInfo extends BaseComponent {
 	private static instance: UserInfo;
 	private userAvatar: eui.Image;

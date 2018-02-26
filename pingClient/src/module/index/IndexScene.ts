@@ -11,7 +11,7 @@ class IndexScene extends BaseComponent{
 		menu.skinName = Main.resUrl + "index/MenuSkin.exml";
 		this.addChild(menu);
 
-		let match = new Match();
+		let match = new MatchIndex();
 		match.skinName = Main.resUrl + "index/MatchSkin.exml";
 		this.addChild(match);
 

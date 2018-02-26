@@ -1,9 +1,3 @@
-/**
- *
- * @author redstoone
- *
- */
-
 class Menu extends BaseComponent {
 	private menuRecordBtn: eui.Button = null;
 	private menuFriendsBtn: eui.Button = null;
