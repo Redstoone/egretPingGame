@@ -2,7 +2,7 @@ class PingScene extends BaseComponent {
 	public constructor() {
 		super();
 
-		let userInfo = new UserInfo();
+		let userInfo = new UserInfo('match');
 		userInfo.skinName = Main.resUrl + "com/UserInfoSkin.exml";
 		this.addChild(userInfo);
 
