@@ -19,7 +19,6 @@ class UserInfo extends BaseComponent {
 	}
 
 	protected initComponent() {
-		console.log(this.matchType)
 		if (this.matchType == "match") {
 			this.userGroup.left = 110
 			this.goldGroup.right = 110

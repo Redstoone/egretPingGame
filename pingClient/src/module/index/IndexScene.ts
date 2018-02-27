@@ -27,6 +27,6 @@ class IndexScene extends BaseComponent {
 	}
 
 	protected initComponent() {
-		console.log('initComponent')
+		console.log('index initComponent')
 	}
 }

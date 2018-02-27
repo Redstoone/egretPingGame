@@ -9,7 +9,7 @@ class ResLoading extends eui.Component {
 
 	public constructor() {
 		super();
-		this.skinName = Main.resUrl +  "loading/ResLoadingSkin.exml";
+		// this.skinName = Main.resUrl +  "loading/ResLoadingSkin.exml";
 		// this.addEventListener(egret.Event.ADDED_TO_STAGE, this.addStage, this);
 	}
 
@@ -19,7 +19,7 @@ class ResLoading extends eui.Component {
 
 	private update() {
 		console.log(this)
-		// this.circle.rotation += 3;
+		this.circle.rotation += 3;
 	}
 
 	public load(groups, callback?) {

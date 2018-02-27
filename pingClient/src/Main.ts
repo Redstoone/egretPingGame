@@ -65,14 +65,16 @@ class Main extends eui.UILayer {
 		let assetAdapter = new AssetAdapter();
 		egret.registerImplementation("eui.IAssetAdapter", assetAdapter);
 		egret.registerImplementation("eui.IThemeAdapter", new ThemeAdapter());
+
+		// initialize the Resource loading library
+		//初始化Resource资源加载库
+		RES.loadConfig("resource/default.res.json", "resource/");
+		RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
+
 		//Config loading process interface
 		//设置加载进度界面
 		this.loadingView = new LoadingUI();
 		this.stage.addChild(this.loadingView);
-		// initialize the Resource loading library
-		//初始化Resource资源加载库
-		RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
-		RES.loadConfig("resource/default.res.json", "resource/");
 	}
 	/**
 	 * 配置文件加载完成,开始预加载皮肤主题资源和preload资源组。

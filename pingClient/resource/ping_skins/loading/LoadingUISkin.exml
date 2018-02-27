@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LoadingUISkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui">
+  <e:Image height="100%" width="100%" x="0" y="0" source="resource/pingGame/bg/hall_bg.jpg"  locked="true"/>
+  <e:Label id="progressLab" text="0%" width="334" left="468" height="38" y="554" anchorOffsetY="0" textAlign="center" />
+  <e:Group width="100%" anchorOffsetY="0" height="108" x="0" y="620">
+    <e:Label text="抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。"  size="26" horizontalCenter="0" top="0"/>
+    <e:Label text="适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。"  size="26" horizontalCenter="0" verticalCenter="0"/>
+    <e:Label text="浙网文[2017] 11226-824号"  size="26" horizontalCenter="0" bottom="0"/>
+  </e:Group>
+</e:Skin>

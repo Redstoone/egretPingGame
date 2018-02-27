@@ -27,25 +27,27 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////
 
-class LoadingUI extends egret.Sprite {
+class LoadingUI extends BaseComponent {
+	public progressLab: eui.Label;
+
 
 	public constructor() {
 		super();
-		this.createView();
+		this.load("loading/LoadingUISkin.exml");
+
+		// this.createView();
 	}
 
-	private textField: egret.TextField;
-
-	private createView(): void {
-		this.textField = new egret.TextField();
-		this.addChild(this.textField);
-		this.textField.y = 600;
-		this.textField.width = 1334;
-		this.textField.height = 100;
-		this.textField.textAlign = "center";
-	}
+	// private createView(): void {
+	// 	this.textField = new egret.TextField();
+	// 	this.addChild(this.textField);
+	// 	this.textField.y = 600;
+	// 	this.textField.width = 1334;
+	// 	this.textField.height = 100;
+	// 	this.textField.textAlign = "center";
+	// }
 
 	public setProgress(current: number, total: number): void {
-		this.textField.text = `Loading... ${current}/${total}`;
+		this.progressLab.text = Math.floor(current / total * 100) + "%";
 	}
 }
