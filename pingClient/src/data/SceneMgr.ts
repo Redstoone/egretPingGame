@@ -17,7 +17,7 @@ class SceneMgr {
 		let loading = new ResLoading();
 		Director.getInstance().pushScene(loading);
 		let call = new CallBackFunc().handler(SceneMgr.onIndex, this, []);
-		loading.load(["com", 'btn', 'index'], call);
+		loading.load(["com", 'index'], call);
 	}
 
 	private static onIndex() {
