@@ -4,10 +4,19 @@ module uiComponent {
 		private name_lab: eui.Label;
 		private avatar_img: eui.Image;
 		private wins_lab: eui.Label;
+		private ranking_NoBg: eui.Image;
 		private shpMask: egret.Shape;
 
 		public constructor() {
 			super();
+
+			this.ranking_NoBg = new eui.Image();
+			this.ranking_NoBg.width = 58;
+			this.ranking_NoBg.height = 60;
+			this.ranking_NoBg.left = 0;
+			this.ranking_NoBg.verticalCenter = 0;
+			this.ranking_NoBg.source = "ranking_no_bg_png";
+			this.addChildAt(this.ranking_NoBg, 1);
 
 			this.avatar_img = new eui.Image();
 			this.avatar_img.width = this.avatar_img.height = 78;
@@ -46,11 +55,20 @@ module uiComponent {
 			this.shpMask.graphics.drawRoundRect(62, 13, 76, 76, 20, 20);
 			this.shpMask.graphics.endFill();
 			this.addChildAt(this.shpMask, 2);
-			this.avatar_img.mask = this.shpMask;	
+			this.avatar_img.mask = this.shpMask;
 		}
 
 		public dataChanged(): void {
-			this.ranking_lab.text = this.data.ranking;
+			console.log(this.data, [1, 2, 3].indexOf(this.data.ranking))
+			// if ([1, 2, 3].indexOf(this.data.ranking) >= 0) {
+				// this.ranking_lab.text = '11111';
+				// console.log(this.ranking_NoBg)
+				// this.ranking_NoBg.visible = false;
+			// } else {
+				this.ranking_lab.text = this.data.ranking;
+				// this.addChildAt(this.ranking_NoBg, 1);
+			// 	this.ranking_NoBg.visible = false;
+			// }
 			this.avatar_img.source = this.data.avatar;
 			this.name_lab.text = this.data.name;
 			this.wins_lab.text = '胜场：' + this.data.wins + '场';
