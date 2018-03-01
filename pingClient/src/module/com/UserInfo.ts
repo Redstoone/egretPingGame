@@ -9,6 +9,7 @@ class UserInfo extends BaseComponent {
 	private goldGroup: eui.Group;
 	private goBackBtn: eui.Button;
 	private settingBtn: eui.Button;
+	private shpMask: egret.Shape;
 
 	private matchType = null;
 
@@ -16,9 +17,16 @@ class UserInfo extends BaseComponent {
 		super();
 		this.matchType = type
 		this.load("com/UserInfoSkin.exml");
+
+		this.shpMask = new egret.Shape();
+		this.shpMask.graphics.beginFill(0x1122cc);
+		this.shpMask.graphics.drawRoundRect(1, 1, 90, 90, 30, 30);
+		this.shpMask.graphics.endFill();
 	}
 
 	protected initComponent() {
+		this.userGroup.addChildAt(this.shpMask, 2);
+		this.userAvatar.mask = this.shpMask;
 		if (this.matchType == "match") {
 			this.userGroup.left = 110
 			this.goldGroup.right = 110

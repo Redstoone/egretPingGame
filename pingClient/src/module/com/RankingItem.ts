@@ -4,6 +4,7 @@ module uiComponent {
 		private name_lab: eui.Label;
 		private avatar_img: eui.Image;
 		private wins_lab: eui.Label;
+		private shpMask: egret.Shape;
 
 		public constructor() {
 			super();
@@ -39,6 +40,13 @@ module uiComponent {
 			this.wins_lab.size = 20;
 			this.wins_lab.textColor = 0x546388;
 			this.addChild(this.wins_lab);
+
+			this.shpMask = new egret.Shape();
+			this.shpMask.graphics.beginFill(0x1122cc);
+			this.shpMask.graphics.drawRoundRect(62, 13, 76, 76, 20, 20);
+			this.shpMask.graphics.endFill();
+			this.addChildAt(this.shpMask, 2);
+			this.avatar_img.mask = this.shpMask;	
 		}
 
 		public dataChanged(): void {
