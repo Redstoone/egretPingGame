@@ -28,26 +28,18 @@
 //////////////////////////////////////////////////////////////////////////////////////
 
 class LoadingUI extends BaseComponent {
+	public proBarActive: eui.Image;
+	public proActive: eui.Image;
 	public progressLab: eui.Label;
 
 
 	public constructor() {
 		super();
 		this.load("loading/LoadingUISkin.exml");
-
-		// this.createView();
 	}
-
-	// private createView(): void {
-	// 	this.textField = new egret.TextField();
-	// 	this.addChild(this.textField);
-	// 	this.textField.y = 600;
-	// 	this.textField.width = 1334;
-	// 	this.textField.height = 100;
-	// 	this.textField.textAlign = "center";
-	// }
 
 	public setProgress(current: number, total: number): void {
 		this.progressLab.text = Math.floor(current / total * 100) + "%";
+		egret.Tween.get(this.proActive).to({x: 1040*current / total}, 100)
 	}
 }
