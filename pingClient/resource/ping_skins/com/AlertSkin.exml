@@ -1,21 +1,28 @@
 <?xml version='1.0' encoding='utf-8'?>
-<e:Skin class="AlertSkin" width="327" height="205" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image height="100%" width="100%" x="0" y="0" scale9Grid="17,16,26,27" source="alert_bg_png"/>
-	<e:Label id="labText" text="标签" x="25" y="63" width="272" height="55" verticalAlign="middle" textAlign="center" size="20"/>
-	<e:Button id="btnOk" label="确定" y="157" width="111" height="56" anchorOffsetX="55.5" anchorOffsetY="28" x="95">
+<e:Skin class="AlertSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="100%" height="100%" x="0" y="0" source="mask_bg_png"/>
+	<e:Group horizontalCenter="0" verticalCenter="0">
+		<e:Image height="410" scale9Grid="17,16,26,27" source="alert_bg_png" left="0" right="0" verticalCenter="0"/>
+		<e:Label id="labText" text="标签" y="88" width="449" height="117" size="36" anchorOffsetX="0" anchorOffsetY="0" fontFamily="SimHei" textColor="0x50536f" verticalAlign="middle" textAlign="center" x="82" lineSpacing="12"/>
+		<e:Button id="btnOk" label="" y="281" width="220" height="79" anchorOffsetX="55.5" anchorOffsetY="28" x="260.5">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="input_ok_png" scale9Grid="37,14,76,28"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" size="20" fontFamily="微软雅黑"/>
+			<e:Image width="100%" height="100%" source="btn_ok_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" size="20" fontFamily="微软雅黑"/>
 			</e:Skin>
 		</e:skinName>
-	</e:Button>
-	<e:Button id="btnCancel" y="157" anchorOffsetX="55.5" width="111" label="取消" height="56" anchorOffsetY="28" x="226">
+		</e:Button>
+	</e:Group>
+	<e:Button id="btnCancel" y="176" anchorOffsetX="55.5" width="80" label="" height="82" anchorOffsetY="28" x="982">
 		<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="input_ok_png" scale9Grid="37,14,76,28"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" size="20" fontFamily="微软雅黑"/>
-			</e:Skin>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_close_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" size="20" fontFamily="微软雅黑"/>
+		</e:Skin>
 		</e:skinName>
 	</e:Button>
+
+
+
+
 </e:Skin>

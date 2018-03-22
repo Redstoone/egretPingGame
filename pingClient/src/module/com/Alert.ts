@@ -1,21 +1,23 @@
 class Alert extends BaseComponent {
 	private static instance: Alert;
 	private static texts: Object = {
-		"InvalidToken": "登录验证失败",
-		"GoldLess": "钻石少于5个不能进入房间",
-		"InRoom": "你已经有房间了，点击进入即可",
-		"CreateFailed": "创建房间出现了异常",
-		"InvalidRoomId": "房间不存在",
-		"RoomNotFound": "房间不存在",
-		"Already": "已经准备了",
-		"PlayerStateError": "还有玩家没有准备",
-		"PlayerLess": "一个人怎么玩?还不赶快邀请你的基友互相伤害!",
-		"RaiseFailed": "跟注错误",
-		"FollowFailed": "加注错误",
-		"LookFailed": "看牌错误",
-		"GiveupFailed": "放弃错误",
-		"PkFailed": "比牌错误",
-		"UserNotExists": "用户不存在"
+		"NetworkErr": "连接失败：无法连接网络 请检查你的网络连接",
+		"RoomNumErr": "房号输入有误，请重新输入",
+		// "InvalidToken": "登录验证失败",
+		// "GoldLess": "钻石少于5个不能进入房间",
+		// "InRoom": "你已经有房间了，点击进入即可",
+		// "CreateFailed": "创建房间出现了异常",
+		// "InvalidRoomId": "房间不存在",
+		// "RoomNotFound": "房间不存在",
+		// "Already": "已经准备了",
+		// "PlayerStateError": "还有玩家没有准备",
+		// "PlayerLess": "一个人怎么玩?还不赶快邀请你的基友互相伤害!",
+		// "RaiseFailed": "跟注错误",
+		// "FollowFailed": "加注错误",
+		// "LookFailed": "看牌错误",
+		// "GiveupFailed": "放弃错误",
+		// "PkFailed": "比牌错误",
+		// "UserNotExists": "用户不存在"
 	};
 
 	public labText: eui.Label;
@@ -27,6 +29,7 @@ class Alert extends BaseComponent {
 
 	public constructor() {
 		super();
+		Alert.instance = this;
 		this.load("com/AlertSkin.exml");
 	}
 
@@ -74,16 +77,8 @@ class Alert extends BaseComponent {
 		inst.func = func;
 		inst.cfunc = cancelFunc;
 		inst.obj = obj;
-		if (cancel) {
-			inst.btnOk.x = 95;
-			inst.btnCancel.x = 226;
-			inst.btnCancel.visible = true;
-		} else {
-			inst.btnOk.x = inst.width / 2;
-			inst.btnCancel.visible = false;
-		}
 
-		// Main.getInstance().addChild(inst);
+		Main.getInstance().addChild(inst);
 	}
 
 	public removeAll() {

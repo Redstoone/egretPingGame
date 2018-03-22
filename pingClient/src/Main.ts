@@ -30,6 +30,7 @@
 class Main extends eui.UILayer {
 	public static resUrl = "resource/ping_skins/"
 	private static instance: Main = null;
+	private alertView: Alert = null;
 
 	public static getInstance() {
 		return Main.instance;
@@ -99,6 +100,11 @@ class Main extends eui.UILayer {
 	 * Loading of theme configuration file is complete, start to pre-load the 
 	 */
 	private onThemeLoadComplete(): void {
+		//初始化alert
+        this.alertView = new Alert();
+        this.alertView.horizontalCenter = 0;
+        this.alertView.verticalCenter = 0;
+
 		this.isThemeLoadEnd = true;
 		this.createScene();
 	}
