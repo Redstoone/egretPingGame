@@ -3,8 +3,8 @@ module uiComponent {
 		public currIndex: number = 0;
 
 		private tabActive: eui.Image = null;
-		private radioBtn: eui.RadioButton = null;
-		private viewStack: eui.ViewStack = null;
+		private rankingGroup: eui.RadioButton = null;
+		private rankingViewStack: eui.ViewStack = null;
 		private douList: eui.List = null;
 		private pingList: eui.List = null;
 
@@ -38,17 +38,17 @@ module uiComponent {
 			// 默认显示斗地主排行榜
 			this.douListShow()
 
-			this.radioBtn.group.addEventListener(eui.UIEvent.CHANGE, this.onChange, this);
+			this.rankingGroup.group.addEventListener(eui.UIEvent.CHANGE, this.onRankingChange, this);
 		}
 
-		private onChange(e: eui.UIEvent) {
-			let radioGroup: eui.RadioButtonGroup = e.target;
-			this.currIndex = radioGroup.selectedValue
+		private onRankingChange(e: eui.UIEvent) {
+			let rankingGroup: eui.RadioButtonGroup = e.target;
+			this.currIndex = rankingGroup.selectedValue
 
 			var tw = egret.Tween.get(this.tabActive);
 			tw.to({ x: this.currIndex * 170.5 + 13 }, 200);
 
-			this.viewStack.selectedIndex = this.currIndex;
+			this.rankingViewStack.selectedIndex = this.currIndex;
 
 			if (this.currIndex == 1) {
 				this.pingListShow()

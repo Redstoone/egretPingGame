@@ -4,6 +4,7 @@ class Menu extends BaseComponent {
 	private menuMallBtn: eui.Button = null;
 	private menuWelfareBtn: eui.Button = null;
 	private menuKefuBtn: eui.Button = null;
+	private friendView: Friend = null;
 
 	public constructor() {
 		super();
@@ -26,7 +27,8 @@ class Menu extends BaseComponent {
 	}
 
 	private onFriendsBtnTouch(ev: egret.TouchEvent): void {
-		console.log('friends:', ev)
+		this.friendView = new Friend();
+		Friend.show();
 	}
 
 	private onMallBtnTouch(ev: egret.TouchEvent): void {

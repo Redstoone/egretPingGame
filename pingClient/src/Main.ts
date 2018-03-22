@@ -102,8 +102,6 @@ class Main extends eui.UILayer {
 	private onThemeLoadComplete(): void {
 		//初始化alert
         this.alertView = new Alert();
-        this.alertView.horizontalCenter = 0;
-        this.alertView.verticalCenter = 0;
 
 		this.isThemeLoadEnd = true;
 		this.createScene();

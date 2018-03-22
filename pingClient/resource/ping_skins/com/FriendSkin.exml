@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="NoticeSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="100%" height="100%" x="2" y="-1" source="mask_bg_png" locked="true"/>
+	<e:Group width="1141" height="677" horizontalCenter="0" verticalCenter="0">
+		<e:Image width="1141" height="677" x="0" y="0" source="dialog_bg_png" locked="true"/>
+		<e:Image width="820" height="495" x="272" y="123" source="dialog_cont_png" locked="true"/>
+		<e:Group id="friendGrp" width="232" height="400" name="Group" anchorOffsetY="0" x="14" y="127">
+			<e:Button label="好友列表" x="0" y="0" id="friendMenuBtn">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_notice_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button label="添加好友" x="0" y="110">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_notice_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button label="邀请好友" x="0" y="220">
+				<e:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="btn_notice_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+		<e:ViewStack id="friendViewStack" height="460" width="769" x="290" y="139" anchorOffsetX="0" anchorOffsetY="0">
+      <e:Group height="100%" width="100%">
+				<e:Label>123123s</e:Label>
+      </e:Group>
+      <e:Group height="100%" width="100%">
+					<e:Label>123123s</e:Label>			
+      </e:Group>
+			<e:Group height="100%" width="100%">
+					<e:Label>123123s</e:Label>			
+      </e:Group>
+    </e:ViewStack>
+	</e:Group>
+	<e:Button id="btnCancel" y="107" anchorOffsetX="55.5" width="80" label="" height="82" anchorOffsetY="28" x="1238">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_close_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" size="20" fontFamily="微软雅黑"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+</e:Skin>

@@ -32,7 +32,6 @@ class MatchIndex extends BaseComponent {
 	}
 
 	private onAddBtnTouch(ev: egret.TouchEvent): void {
-		Alert.show("RoomNumErr", true);
 		console.log('add: ', ev)
 	}
 }
