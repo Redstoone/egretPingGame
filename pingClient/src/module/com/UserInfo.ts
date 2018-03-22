@@ -17,14 +17,13 @@ class UserInfo extends BaseComponent {
 		super();
 		this.matchType = type
 		this.load("com/UserInfoSkin.exml");
+	}
 
+	protected initComponent() {
 		this.shpMask = new egret.Shape();
 		this.shpMask.graphics.beginFill(0x1122cc);
 		this.shpMask.graphics.drawRoundRect(1, 1, 90, 90, 30, 30);
 		this.shpMask.graphics.endFill();
-	}
-
-	protected initComponent() {
 		this.userGroup.addChildAt(this.shpMask, 2);
 		this.userAvatar.mask = this.shpMask;
 		if (this.matchType == "match") {
