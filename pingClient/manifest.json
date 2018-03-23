@@ -11,7 +11,7 @@
 	],
 	"game": [
 		"bin-debug/utils/BaseComponent.js",
-		"bin-debug/module/index/Menu.js",
+		"bin-debug/utils/Util.js",
 		"bin-debug/ThemeAdapter.js",
 		"bin-debug/data/SceneMgr.js",
 		"bin-debug/module/com/Alert.js",
@@ -24,7 +24,7 @@
 		"bin-debug/module/index/MatchDou.js",
 		"bin-debug/module/index/MatchIndex.js",
 		"bin-debug/module/index/MatchPing.js",
-		"bin-debug/Main.js",
+		"bin-debug/module/index/Menu.js",
 		"bin-debug/module/index/PingScene.js",
 		"bin-debug/module/index/RankingIndex.js",
 		"bin-debug/module/index/RankingMatch.js",
@@ -37,6 +37,6 @@
 		"bin-debug/utils/Display.js",
 		"bin-debug/utils/GuidLayerUtil.js",
 		"bin-debug/utils/Network.js",
-		"bin-debug/utils/Util.js"
+		"bin-debug/Main.js"
 	]
 }

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="MallSkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="100%" height="100%" x="0" y="0" source="mask_bg_png"/>
+	<e:Group horizontalCenter="0" verticalCenter="0">
+		<e:Image height="676" scale9Grid="17,16,26,27" left="0" right="0" verticalCenter="0" width="1141" source="mall_bg_png"/>
+	</e:Group>
+	<e:Button id="btnCancel" y="110" anchorOffsetX="55.5" width="80" label="" height="82" anchorOffsetY="28" x="1237">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="btn_close_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" size="20" fontFamily="微软雅黑"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+</e:Skin>

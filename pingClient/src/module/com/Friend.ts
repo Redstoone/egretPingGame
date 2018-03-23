@@ -21,7 +21,7 @@ class Friend extends BaseComponent {
 		let nemuList = Friend.instance.friendGrp.$children;
 		nemuList.forEach((item, index) => {
 			if (index == 0) {
-				item.$children[0].source = "btn_notice_active_png"
+				// item.$children[0].source = "btn_notice_active_png"
 			}
 		})
 
@@ -56,10 +56,10 @@ class Friend extends BaseComponent {
 		console.log(friendBtn)
 		this.friendGrp.$children.forEach((item, index) => {
 			if (index == 0) {
-				item.$children[0].source = "btn_notice_png"
+				// item.$children[0].source = "btn_notice_png"
 			}
 		})
-		friendBtn.$children[0].source = "btn_notice_active_png"
+		// friendBtn.$children[0].source = "btn_notice_active_png"
 	}
 
 	private onTouchCancel(ev: egret.TouchEvent) {
