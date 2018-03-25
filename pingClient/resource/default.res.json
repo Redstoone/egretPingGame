@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "ranking_btn_active_png,ranking_dou_png,ranking_dou_active_png,ranking_nav_bar_png,ranking_ping_png,ranking_ping_active_png,add_png,gold_png,gold_bg_png,info_bg_png,notice_bg_png,ranking_bg_png,ranking_item_bg_png,ranking_no_bg_png,ranking_user_jpg,ranking_user_bg_png,role_png,user_border_png,match_add_png,match_create_png,match_dou_png,match_ping_png,menu_bg_png,menu_friends_png,menu_kefu_png,menu_mall_png,menu_record_png,menu_welfare_png,ranking_0_png,ranking_1_png,ranking_2_png,ranking_3_png,ranking_4_png,ranking_5_png,ranking_6_png,ranking_7_png,ranking_8_png,ranking_9_png,ranking_no1_png,ranking_no2_png,ranking_no3_png,setting_png,goback_png,diamonds_png,match_arena_png,match_fkps_png,match_jzps_png,ranking_match_bg_png,hall_bg_jpg,progress_bar_active_png,progress_active_png,progress_bar_png,alert_bg_png,btn_ok_png,btn_close_png,mask_bg_png,btn_notice_png,btn_notice_active_png,dialog_cont_png,dialog_bg_png,mall_bg_png",
+			"keys": "ranking_btn_active_png,ranking_dou_png,ranking_dou_active_png,ranking_nav_bar_png,ranking_ping_png,ranking_ping_active_png,add_png,gold_png,gold_bg_png,info_bg_png,notice_bg_png,ranking_bg_png,ranking_item_bg_png,ranking_no_bg_png,ranking_user_jpg,ranking_user_bg_png,role_png,user_border_png,match_add_png,match_create_png,match_dou_png,match_ping_png,menu_bg_png,menu_friends_png,menu_kefu_png,menu_mall_png,menu_record_png,menu_welfare_png,ranking_0_png,ranking_1_png,ranking_2_png,ranking_3_png,ranking_4_png,ranking_5_png,ranking_6_png,ranking_7_png,ranking_8_png,ranking_9_png,ranking_no1_png,ranking_no2_png,ranking_no3_png,setting_png,goback_png,diamonds_png,match_arena_png,match_fkps_png,match_jzps_png,ranking_match_bg_png,hall_bg_jpg,progress_bar_active_png,progress_active_png,progress_bar_png,alert_bg_png,btn_ok_png,btn_close_png,mask_bg_png,btn_notice_png,btn_notice_active_png,dialog_cont_png,dialog_bg_png,mall_bg_png,logo_png",
 			"name": "preload"
 		},
 		{
@@ -322,6 +322,11 @@
 			"name": "mall_bg_png",
 			"type": "image",
 			"url": "pingGame/dialog/mall_bg.png"
+		},
+		{
+			"name": "logo_png",
+			"type": "image",
+			"url": "pingGame/com/logo.png"
 		}
 	]
 }

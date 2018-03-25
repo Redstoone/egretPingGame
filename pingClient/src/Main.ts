@@ -72,7 +72,6 @@ class Main extends eui.UILayer {
 		RES.loadConfig("resource/default.res.json", "resource/");
 		RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
 
-		//Config loading process interface
 		//设置加载进度界面
 		this.loadingView = new LoadingUI();
 		this.stage.addChild(this.loadingView);
@@ -82,6 +81,9 @@ class Main extends eui.UILayer {
 	 * Loading of configuration file is complete, start to pre-load the theme configuration file and the preload resource group
 	 */
 	private onConfigComplete(event: RES.ResourceEvent): void {
+		
+
+		//Config loading process interface
 		RES.removeEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
 		// load skin theme configuration file, you can manually modify the file. And replace the default skin.
 		//加载皮肤主题配置文件,可以手动修改这个文件。替换默认皮肤。
@@ -93,6 +95,8 @@ class Main extends eui.UILayer {
 		RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
 		RES.addEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
 		RES.loadGroup("preload");
+
+		
 	}
 	private isThemeLoadEnd: boolean = false;
 	/**

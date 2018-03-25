@@ -18,7 +18,6 @@ class ResLoading extends eui.Component {
 	}
 
 	private update() {
-		console.log(this)
 		this.circle.rotation += 3;
 	}
 

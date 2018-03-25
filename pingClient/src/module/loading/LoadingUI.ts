@@ -41,5 +41,6 @@ class LoadingUI extends BaseComponent {
 	public setProgress(current: number, total: number): void {
 		this.progressLab.text = Math.floor(current / total * 100) + "%";
 		egret.Tween.get(this.proActive).to({x: 1040*current / total}, 100)
+		// egret.Tween.get(this.proBarActive).to({x: 1040*current / total}, 100)
 	}
 }
