@@ -1,6 +1,5 @@
-class Friend extends BaseComponent {
-	private static instance: Friend;
-
+class RecordDialog extends BaseComponent {
+	private static instance: RecordDialog;
 	private btnCancel: eui.Button;
 	private func: Function;
 	private cfunc: Function;
@@ -8,8 +7,8 @@ class Friend extends BaseComponent {
 
 	public constructor() {
 		super();
-		Friend.instance = this;
-		this.load("com/FriendSkin.exml");
+		RecordDialog.instance = this;
+		this.load("com/RecordSkin.exml");
 	}
 
 	protected initComponent() {
@@ -43,7 +42,7 @@ class Friend extends BaseComponent {
 	}
 
 	public static show(func: Function = null, obj: any = null, cancel = false, cancelFunc: Function = null) {
-		var inst = Friend.instance;
+		var inst = RecordDialog.instance;
 		inst.func = func;
 		inst.cfunc = cancelFunc;
 		inst.obj = obj;

@@ -5,6 +5,7 @@ class Menu extends BaseComponent {
 	private menuWelfareBtn: eui.Button = null;
 	private menuKefuBtn: eui.Button = null;
 	private friendView: Friend = null;
+	private recordView: RecordDialog = null;
 
 	public constructor() {
 		super();
@@ -23,7 +24,8 @@ class Menu extends BaseComponent {
 	}
 
 	private onRecordBtnTouch(ev: egret.TouchEvent): void {
-		console.log('record:', ev, this)
+		this.recordView = new RecordDialog();
+		RecordDialog.show();
 	}
 
 	private onFriendsBtnTouch(ev: egret.TouchEvent): void {
