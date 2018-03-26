@@ -1,7 +1,9 @@
 class IndexScene extends BaseComponent {
+	private static instance: IndexScene = null;
 
 	public constructor() {
 		super();
+		IndexScene.instance = this
 
 		let userInfo = new UserInfo();
 		userInfo.skinName = Main.resUrl + "com/UserInfoSkin.exml";
@@ -23,10 +25,14 @@ class IndexScene extends BaseComponent {
 		ranking.skinName = Main.resUrl + "index/RankingIndexSkin.exml";
 		this.addChild(ranking);
 
+		console.log(Main.getInstance().stage.stageHeight, Main.getInstance().stage.stageWidth)
 		this.load("index/IndexSceneSkin.exml");
 	}
 
 	protected initComponent() {
+		// IndexScene.instance.height = Main.getInstance().stage.stageHeight
+		console.log(IndexScene.instance.height)
+		// console.log(this.$stage.$stageHeight = 250)
 		console.log('index initComponent')
 	}
 }

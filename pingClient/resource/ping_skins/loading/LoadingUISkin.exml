@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="LoadingUISkin" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image height="100%" width="100%" x="0" y="0" source="resource/pingGame/bg/hall_bg.jpg" />
+	<e:Image height="100%" width="100%" x="0" y="0" source="resource/pingGame/bg/hall_bg.jpg"  visible="false"/>
 
   <e:Group width="100%" anchorOffsetY="0" height="108" x="0" y="620">
     <e:Label text="抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。"  size="26" horizontalCenter="0" top="0" textColor="0xd5d5d5"/>

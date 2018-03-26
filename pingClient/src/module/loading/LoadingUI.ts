@@ -32,15 +32,54 @@ class LoadingUI extends BaseComponent {
 	public proActive: eui.Image;
 	public progressLab: eui.Label;
 
+	// private textField: egret.TextField;
+	private bar: egret.Shape;
+	private sec: number = 0;
+	private perNumber: number = 0;
 
 	public constructor() {
 		super();
 		this.load("loading/LoadingUISkin.exml");
+		// this.addEventListener(egret.Event.ADDED_TO_STAGE, this.createView, this);
+	}
+
+	protected initComponent() {
+		let height = egret.Capabilities.boundingClientHeight;
+		let width = egret.Capabilities.boundingClientWidth;
+		let barBg = new egret.Shape();
+
+		barBg.graphics.beginFill(0x666666);
+		barBg.graphics.drawRoundRect(0, 0, 800, 10, 5);
+		barBg.graphics.endFill();
+		// this.addChild(barBg);
+
+		this.bar = new egret.Shape();
+		this.bar.graphics.beginFill(0xffffff);
+		this.bar.graphics.drawRoundRect(0, 0, 800, 10, 5);
+		this.bar.graphics.endFill();
+		// this.addChild(this.bar);
+
+		// barBg.x = width / 2 - barBg.width / 2;
+		// barBg.y = 580;
+
+		// this.bar.x = barBg.x;
+		// this.bar.y = barBg.y;
 	}
 
 	public setProgress(current: number, total: number): void {
-		this.progressLab.text = Math.floor(current / total * 100) + "%";
-		egret.Tween.get(this.proActive).to({x: 1040*current / total}, 100)
+		if (current == 1) {
+			this.perNumber = total / 10;
+		}
+		this.sec = (current / this.perNumber) * 10;
+
+		// let secs: any = this.sec.toFixed(0);
+		// secs = secs / 100;
+		// this.bar.scaleX = current / total;
+		// this.textField.text = this.sec.toFixed(0) + " %";
+
+
+		this.progressLab.text = this.sec.toFixed(0) + "%";
+		// egret.Tween.get(this.proActive).to({x: 1040*current / total}, 100)
 		// egret.Tween.get(this.proBarActive).to({x: 1040*current / total}, 100)
 	}
 }

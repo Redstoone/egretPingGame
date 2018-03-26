@@ -18,15 +18,31 @@
 			border: 0;
 			margin: 0;
 			height: 100%;
+			position: relative;
 		}
+		.bg-wrap{
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 0;
+		}
+		
 	</style>
 </head>
 
 <body>
+	<div id="contentWrap" class="bg-wrap" style="background-image: url('./resource/pingGame/bg/hall_bg.jpg')"></div>
 	<div style="margin: auto;width: 100%;height: 100%;" class="egret-player" 
 	data-entry-class="Main" 
 	data-orientation="landscape" 
-	data-scale-mode="showAll" 
+	data-scale-mode="fixedWidth" 
 	data-frame-rate="30"
 	data-content-width="1334" 
 	data-content-height="750" 
@@ -36,6 +52,7 @@
 	data-show-log="false" 
 	data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
 </div>
+<script src="./vconsole.min.js"></script>
 <script>
 	var loadScript = function (list, callback) {
 		var loaded = 0;
@@ -93,11 +110,9 @@
 		});
 	});
 	xhr.send(null);
-</script>
-<script src="./vconsole.min.js"></script>
-<script>
-  // init vConsole
-  var vConsole = new VConsole();
+
+	// init vConsole
+	var vConsole = new VConsole();
 </script>
 </body>
 
