@@ -18,19 +18,9 @@ class Friend extends BaseComponent {
 	}
 
 	protected initComponent() {
-		let nemuList = Friend.instance.friendGrp.$children;
-		nemuList.forEach((item, index) => {
-			if (index == 0) {
-				// item.$children[0].source = "btn_notice_active_png"
-			}
-		})
-
 		this.btnCancel.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onButtonTouchBegin, this);
 		this.btnCancel.addEventListener(egret.TouchEvent.TOUCH_END, this.onButtonTouchEnd, this);
 		this.btnCancel.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTouchCancel, this);
-
-		this.friendGrp.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onFriendMenuTouch, this);
-
 	}
 
 	private onButtonTouchBegin(ev: egret.TouchEvent) {
@@ -48,18 +38,6 @@ class Friend extends BaseComponent {
 		if (this.func) {
 			this.func.call(this.obj);
 		}
-	}
-
-	private onFriendMenuTouch(e: eui.UIEvent) {
-		let friendBtn: eui.Button = e.target;
-		// this.currIndex = rankingGroup.selectedValue
-		console.log(friendBtn)
-		this.friendGrp.$children.forEach((item, index) => {
-			if (index == 0) {
-				// item.$children[0].source = "btn_notice_png"
-			}
-		})
-		// friendBtn.$children[0].source = "btn_notice_active_png"
 	}
 
 	private onTouchCancel(ev: egret.TouchEvent) {

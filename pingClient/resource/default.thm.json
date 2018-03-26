@@ -1,5 +1,7 @@
 {
   "skins": {},
   "autoGenerateExmlsList": true,
-  "exmls": []
+  "exmls": [
+    "resource/eui_skins/TabBar.exml"
+  ]
 }
